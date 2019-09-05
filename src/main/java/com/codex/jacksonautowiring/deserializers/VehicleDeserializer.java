@@ -1,5 +1,6 @@
 package com.codex.jacksonautowiring.deserializers;
 
+import com.codex.jacksonautowiring.Auto;
 import com.codex.jacksonautowiring.Car;
 import com.codex.jacksonautowiring.Vehicle;
 import com.fasterxml.jackson.core.JsonParser;
@@ -20,10 +21,10 @@ public class VehicleDeserializer extends JsonDeserializer<Vehicle> {
     public Vehicle deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
         JsonNode jsonNode = jsonParser.getCodec().readTree(jsonParser);
         Vehicle vehicle=null;
-        if (jsonNode.has("carDriverName")){
+        if (jsonNode.findPath("carDriverName")!=null){
             vehicle = objectMapper.readValue(jsonParser, Car.class);
-        }else if (jsonNode.has("autoDriverName")){
-
+        }else if (jsonNode.findPath("autoDriverName")!=null){
+            vehicle = objectMapper.readValue(jsonParser, Auto.class);
         }
         return vehicle;
     }

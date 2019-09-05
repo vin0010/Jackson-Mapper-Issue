@@ -1,0 +1,11 @@
+com/codex/jacksonautowiring/Car.class
+com/codex/jacksonautowiring/TestObject.class
+com/codex/jacksonautowiring/User.class
+com/codex/jacksonautowiring/deserializers/VehicleDeserializer.class
+com/codex/jacksonautowiring/JacksonAutowiringApplication.class
+com/codex/jacksonautowiring/MapperConfig.class
+com/codex/jacksonautowiring/Auto.class
+com/codex/jacksonautowiring/Wealth.class
+com/codex/jacksonautowiring/Vehicle.class
+com/codex/jacksonautowiring/TestController.class
+com/codex/jacksonautowiring/Address.class
