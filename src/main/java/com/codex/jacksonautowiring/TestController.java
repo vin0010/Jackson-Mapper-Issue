@@ -12,7 +12,7 @@ import java.util.List;
 public class TestController {
 
     @RequestMapping(path = "/jackson", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void forSingleObject(@RequestBody Vehicle vehicle){
+    public void forSingleObject(@RequestBody MyModel myModel){
         System.out.println("Deserialization successful");
     }
 }

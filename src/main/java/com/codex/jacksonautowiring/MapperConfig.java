@@ -20,10 +20,6 @@ public class MapperConfig {
         List<Module> modules = new ArrayList<>();
         modules.add(new SimpleModule().addDeserializer(Vehicle.class, new VehicleDeserializer()));
         objectMapper.registerModules(modules);
-//        objectMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-//        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-//        objectMapper.configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, true);
-        objectMapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
         return objectMapper;
     }
 }
