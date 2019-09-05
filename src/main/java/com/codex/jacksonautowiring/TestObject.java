@@ -1,13 +1,24 @@
 package com.codex.jacksonautowiring;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.util.List;
 
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder(
+        {
+                "wealths",
+                "users",
+                "dummyfield1",
+                "dummyfield2"
+        }
+)
 public class TestObject {
+    private List<Wealth> wealths;
     private List<User> users;
-    private List<Vehicle> vehicle;
     private String dummyfield1;
     private String dummyfield2;
-
 
     public List<User> getUsers() {
         return users;
@@ -15,14 +26,6 @@ public class TestObject {
 
     public void setUsers(List<User> users) {
         this.users = users;
-    }
-
-    public List<Vehicle> getVehicle() {
-        return vehicle;
-    }
-
-    public void setVehicle(List<Vehicle> vehicle) {
-        this.vehicle = vehicle;
     }
 
     public String getDummyfield1() {
@@ -39,5 +42,13 @@ public class TestObject {
 
     public void setDummyfield2(String dummyfield2) {
         this.dummyfield2 = dummyfield2;
+    }
+
+    public List<Wealth> getWealths() {
+        return wealths;
+    }
+
+    public void setWealths(List<Wealth> wealths) {
+        this.wealths = wealths;
     }
 }
